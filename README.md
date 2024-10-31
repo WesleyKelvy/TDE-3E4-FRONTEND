@@ -28,8 +28,8 @@ Siga as instruções abaixo para construir o CSS e cobrir os principais conceito
 
 ### 1. Estilos Básicos com CSS
 
-1. **Estilos Globais**: Inicie definindo um reset básico com `* { margin: 0; padding: 0; box-sizing: border-box; }` para garantir consistência entre navegadores.
-2. **Fonte e Cores**: Defina uma fonte padrão e escolha uma paleta de cores para o layout. Use `font-family`, `color`, `background-color` e `line-height` para definir uma tipografia clara e acessível.
+1. **Estilos Globais**: O projeto já possui um reset básico com `* { margin: 0; padding: 0; box-sizing: border-box; }` para garantir consistência entre navegadores.
+2. **Fonte e Cores**: Defina uma fonte padrão e escolha uma paleta de cores para o layout com base nos estilos fornecidos no item 3. Use `font-family`, `color`, `background-color` e `line-height` para definir uma tipografia clara e acessível.
 3. **Hierarquia de Títulos**: Ajuste o tamanho, cor e espaçamento dos títulos `h1`, `h2`, etc., para criar uma hierarquia visual.
 4. **Efeitos de Hover**: Adicione transições suaves para links, botões e imagens. Use a propriedade `transition` para efeitos como `hover`, tornando a interação mais agradável.
 5. **Sombreamento e Bordas**: Utilize `box-shadow` para destacar blocos de conteúdo e `border-radius` para adicionar curvas nos botões ou nas imagens, conferindo um visual moderno.
