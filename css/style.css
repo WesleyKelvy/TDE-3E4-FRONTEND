@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     background-image: url("https://marcas-logos.net/wp-content/uploads/2022/08/Logotipo-de-Gryffindor.png"),
 
@@ -24,10 +28,13 @@ a {
     background-position: right, left;
 
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: #301006;
     color: #ffffff;
     padding: 20px;
+    border-radius: 0px 0px 12px 12px;
+    z-index: 10;
 }
 
 .header__title {
@@ -51,15 +58,14 @@ a {
 }
 
 .header__menu>li {
-    background-color: #740001;
-    border-radius: 8px;
-    padding: 8px 0px;
-    width: 80px;
     text-align: center;
-
 }
 
 .header__menu>li:hover {
+    color: black;
+    font-weight: bold;
+}
+.menu__link:hover {
     color: black;
     font-weight: bold;
     background-color: #eeba30;
@@ -67,13 +73,47 @@ a {
 
 .menu__link {
     color: #ffffff;
+    background-color: #740001;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 80px;
+    display: block;
     text-decoration: none;
 }
+
+/* Animação para afastar e exibir a seção intro */
+/* @keyframes slide-up {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+} */
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 
 #intro {
     background-image: url("https://wallpapers.com/images/hd/great-hall-harry-potter-desktop-zjejeshp84mf1tc7.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    margin-top: -10px;
+    z-index: 1;
+    animation: slide-down 1s ease forwards;
 }
 
 .section {
@@ -122,35 +162,35 @@ a {
 }
 
 /* -- About Section -- */
-@keyframes appear-in {
+@keyframes slide {
     from {
-        translate: 0;
+        /* opacity: 0; */
+        transform: translateY(-362px);
 
-        opacity: 0;
     }
 
     to {
-        translate: 0 0;
-
-        opacity: 1;
+        /* opacity: 1; */
+        transform: translateY(-0px);
+        ;
     }
 }
 
 #about {
     margin-top: -10px;
     border-radius: 12px;
-    /* border: black 4px solid; */
-    /* border-radius: 8px; */
     background: #000;
     color: white;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://wallpapercat.com/w/full/c/b/a/248622-2000x2349-phone-hd-gryffindor-background-photo.jpg");
 
-    background-size: 200px;
+    background-size: 250px;
     background-position: center;
-    animation-name: appear-in;
+    animation-name: slide;
     animation-duration: 4s;
+    z-index: 2;
+    position: relative;
 }
 
 .about__grid {
@@ -174,10 +214,12 @@ a {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url("https://st2.depositphotos.com/1024166/5548/v/450/depositphotos_55487887-stock-illustration-seamless-checkered-pattern.jpg");
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
     background-position: center;
     color: white;
+    animation-name: slide;
+    animation-duration: 4s;
+    z-index: 2;
+    position: relative;
 }
 
 .gallery__grid {
@@ -189,6 +231,10 @@ a {
 .gallery__item {
     position: relative;
     text-align: center;
+    border: rgba(255, 255, 255, 0.397) 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: hsla(0, 0%, 7%, 0.8);
 }
 
 .gallery__item>img {
@@ -225,6 +271,10 @@ a {
     margin-top: -10px;
     border-radius: 12px;
     background-repeat: no-repeat;
+    animation-name: slide;
+    animation-duration: 4s;
+    z-index: 2;
+    position: relative;
 
 }
 
@@ -248,11 +298,12 @@ a {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://wallpapercat.com/w/full/c/b/a/248622-2000x2349-phone-hd-gryffindor-background-photo.jpg");
-
-    background-size: 200px;
+    background-size: 250px;
     background-position: center;
-    animation-name: appear-in;
+    animation-name: slide;
     animation-duration: 4s;
+    z-index: 2;
+    position: relative;
 }
 
 .news__grid {
@@ -263,9 +314,9 @@ a {
 
 .news__item {
     background-color: hsla(14, 78%, 11%, 0.8);
-    border-radius: 8px;
     overflow: hidden;
     padding: 15px;
+    border-radius: 8px;
     border: rgba(255, 255, 255, 0.397) 1px solid;
 }
 
@@ -283,16 +334,16 @@ a {
     margin-top: -10px;
     border-radius: 12px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     background-color: black;
+
 }
 
 #contact::before {
     border-radius: 12px;
-
     content: "";
     position: absolute;
     top: 0;
@@ -313,6 +364,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: rgba(238, 187, 47, 0.7) 2px solid;
+    background-color: hsla(14, 78%, 11%, 0.2);
 }
 
 .form__group {
@@ -431,7 +486,7 @@ a {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 528px) {
     .header__menu {
         display: grid;
         justify-content: center;
