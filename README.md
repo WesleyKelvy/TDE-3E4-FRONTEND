@@ -56,13 +56,13 @@ Siga as instruções abaixo para construir o CSS e cobrir os principais conceito
 ## Checklist do Projeto
 
 Para finalizar, verifique se:
-- [ ] O layout é responsivo e adapta-se bem a diferentes tamanhos de tela.
-- [ ] Você utilizou Flexbox nas seções recomendadas.
-- [ ] Estilos básicos como cores, fontes e espaçamento foram aplicados para melhorar a aparência visual.
-- [ ] Transições e efeitos de hover foram implementados para melhorar a interatividade.
-- [ ] Você testou o projeto em diferentes dispositivos e navegadores para garantir compatibilidade e responsividade.
-- [ ] Você utilizou algum dos temas visuais fornecidos.
-- [ ] Você inseriu uma fonte customizada.
-- [ ] Você não modificou o HTML.
+- [X] O layout é responsivo e adapta-se bem a diferentes tamanhos de tela.
+- [X] Você utilizou Flexbox nas seções recomendadas.
+- [X] Estilos básicos como cores, fontes e espaçamento foram aplicados para melhorar a aparência visual.
+- [X] Transições e efeitos de hover foram implementados para melhorar a interatividade.
+- [X] Você testou o projeto em diferentes dispositivos e navegadores para garantir compatibilidade e responsividade.
+- [X] Você utilizou algum dos temas visuais fornecidos.
+- [X] Você inseriu uma fonte customizada.
+- [X] Você não modificou o HTML.
 
 Com essas instruções, você poderá transformar o layout em uma experiência responsiva, desenvolvendo e consolidando suas habilidades com CSS, Flexbox e Responsividade. Use sua criatividade para aplicar temas e elementos visuais que melhor representem seu estilo de design!
